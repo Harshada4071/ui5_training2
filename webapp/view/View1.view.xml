@@ -1,0 +1,53 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="ui5training2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+      	<Label class="sapUiSmallMarginTop sapUiTinyMarginBottom" />
+	<FeedInput
+		post="onPost"
+		showIcon="true" />
+
+<Panel headerText="User Details">
+      <Table items="{	path: '/results'}">
+            <items>
+                <ColumnListItem type="Navigation" press="onLineItemPress">
+                    <cells>   
+                         <Text text="{username}"></Text>
+                        <Text text="{firstname}"></Text>
+                        <Text text="{lastname}"></Text>
+                        <Text text="{gender}"></Text>
+                        <Text text="{=${active} === 'X' ? 'Yes':'No'}"></Text>         <!-- Expression Binding -->
+                     </cells>
+                </ColumnListItem>
+           </items>
+         <columns>
+            <Column >
+                <header>
+                    <Text text="Username"></Text>
+                </header>
+            </Column>
+             <Column >
+                 <header>
+                    <Text text="First Name"></Text>
+                 </header>
+            </Column>
+             <Column >
+                <header>
+                     <Text text="Last Name"></Text>
+                  </header>
+            </Column>
+             <Column >
+                <header>
+                    <Text text="Gender"></Text>
+                </header>
+            </Column>
+            <Column >
+                <header>
+                    <Text text="Status"></Text>
+                </header>
+            </Column>
+      </columns>
+    </Table> 
+</Panel>
+    </Page>
+</mvc:View>
