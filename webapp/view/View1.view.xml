@@ -2,10 +2,10 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-      	<Label class="sapUiSmallMarginTop sapUiTinyMarginBottom" />
+      	<!-- <Label class="sapUiSmallMarginTop sapUiTinyMarginBottom" />
 	<FeedInput
 		post="onPost"
-		showIcon="true" />
+		showIcon="true" /> -->
 
 <Panel headerText="User Details">
       <Table items="{	path: '/results'}">
@@ -16,6 +16,7 @@
                         <Text text="{firstname}"></Text>
                         <Text text="{lastname}"></Text>
                         <Text text="{gender}"></Text>
+                        <Text text="{mobileno}" visible="false"></Text>
                         <Text text="{=${active} === 'X' ? 'Yes':'No'}"></Text>         <!-- Expression Binding -->
                      </cells>
                 </ColumnListItem>
@@ -39,6 +40,11 @@
              <Column >
                 <header>
                     <Text text="Gender"></Text>
+                </header>
+            </Column>
+             <Column visible="false">
+                <header>
+                    <Text text="Mobile No" visible="false"></Text>
                 </header>
             </Column>
             <Column >

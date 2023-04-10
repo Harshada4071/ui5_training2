@@ -18,6 +18,7 @@ sap.ui.define([
                     "firstname": "Harshada",
                     "lastname": "Patil",
                     "gender": "Female",
+                    "mobileno":"99886768789",
                     "active": "X"
                 },
                 {
@@ -25,6 +26,7 @@ sap.ui.define([
                     "firstname": "Amruta",
                     "lastname": "Shedge",
                     "gender": "Female",
+                    "mobileno":"7788987765",
                     "active": ""
                 },
                 {
@@ -32,6 +34,7 @@ sap.ui.define([
                     "firstname": "Disha",
                     "lastname": "Khandalkar",
                     "gender": "Female",
+                    "mobileno":"9945678965",
                     "active": "X"
                 },
                 {
@@ -39,6 +42,7 @@ sap.ui.define([
                     "firstname": "Sharayu",
                     "lastname": "Thombre",
                     "gender": "Female",
+                    "mobileno":"8876567855",
                     "active": ""
                 }
 
@@ -78,7 +82,7 @@ sap.ui.define([
                         id: "idDialog",
                         title: "Display User Details",
                         content: new Text({
-                            text: "{username}"
+                            text: "Mobile no: {mobileno}"
                         }),
                         endButton: new Button({
                             text: "Cancel",
